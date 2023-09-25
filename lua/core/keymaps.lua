@@ -1,6 +1,7 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
-
+-- set number
+vim.wo.relativenumber = true
 vim.opt.backspace = '2'
 -- displays the partial command you are typing in the last line of the Neovim interface. 
 vim.opt.showcmd = true
