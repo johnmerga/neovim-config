@@ -21,7 +21,12 @@ return require('packer').startup(function(use)
   use {
 			'nvim-telescope/telescope.nvim',
 			tag = '0.1.0',
-			require = { { 'nvim-lua/plenary.nvim'}}
+			requires = { { 'nvim-lua/plenary.nvim'}}
+	}
+	use {
+		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
+		"neovim/nvim-lspconfig",
 	}
   -- My plugins here
   -- use 'foo1/bar1.nvim'
