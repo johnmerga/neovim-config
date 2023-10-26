@@ -6,8 +6,18 @@ local keymap = vim.keymap -- for conciseness
 ---------------------
 -- General Keymaps -------------------
 
+----- Custom keymaps -----
 -- use jk to exit insert mode
 keymap.set("i", "kk", "<ESC>", { desc = "Exit insert mode with jk" })
+-- remap <C-f> to <M-f> for normal mod for forwarding and backwarding pages
+keymap.set("n", "<M-f>", "<C-f>", { desc = "next page" })
+keymap.set("n", "<M-u>", "<C-b>", { desc = "next page" })
+-- scroll up and down
+keymap.set("n", "<M-e>", "<C-e>", { desc = "scroll down" })
+keymap.set("n", "<M-y>", "<C-y>", { desc = "scroll up" })
+-- go to (previous,next) tab
+keymap.set("n", "<M-h>", "<cmd>tabprevious<CR>", { desc = "go to previous tab" })
+keymap.set("n", "<M-l>", "<cmd>tabnext<CR>", { desc = "go to next tab" })
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
