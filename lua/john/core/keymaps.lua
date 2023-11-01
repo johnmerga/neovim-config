@@ -5,6 +5,8 @@ local keymap = vim.keymap -- for conciseness
 
 ---------------------
 -- General Keymaps -------------------
+--
+--debugging
 
 ----- Custom keymaps -----
 -- use jk to exit insert mode
@@ -18,6 +20,12 @@ keymap.set("n", "<M-y>", "<C-y>", { desc = "scroll up" })
 -- go to (previous,next) tab
 keymap.set("n", "<M-h>", "<cmd>tabprevious<CR>", { desc = "go to previous tab" })
 keymap.set("n", "<M-l>", "<cmd>tabnext<CR>", { desc = "go to next tab" })
+-- switching between splitted buffers
+keymap.set("n", "<M-w>", "<C-w>w", { desc = "switch between splitted buffers" })
+keymap.set("n", "<M-W>", "<C-w>W", { desc = "switch between splitted buffers vertically" })
+
+-- move lines up and down
+-- keymap.set("n", "<M-j>", ":m .+1<CR>==", { desc = "move line down" })
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
