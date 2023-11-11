@@ -6,9 +6,15 @@ return {
     local conform = require("conform")
 
     conform.setup({
+      -- formatters = {
+      --   eslint_d = {
+      --     command = "eslint_d",
+      --     args = { "--fix-to-stdout", "--stdin", "--config" },
+      --   },
+      -- },
       formatters_by_ft = {
-        javascript = { "prettier" },
-        typescript = { "prettier" },
+        javascript = { "prettier", "eslint_d" },
+        typescript = { "prettier", "eslint_d" },
         javascriptreact = { "prettier" },
         typescriptreact = { "prettier" },
         svelte = { "prettier" },
