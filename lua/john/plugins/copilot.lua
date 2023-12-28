@@ -3,6 +3,10 @@ return {
   "github/copilot.vim",
   lazy = false,
   config = function()
+    vim.g.copilot_filetypes = {
+      yaml = true,
+      markdown = true,
+    }
     -- Mapping tab is already used by NvChad
     vim.g.copilot_no_tab_map = true
     vim.g.copilot_assume_mapped = true
